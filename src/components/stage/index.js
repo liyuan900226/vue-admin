@@ -13,5 +13,10 @@ export default [
         path: '/account',
         component: resolve => require(['./Account.vue'], resolve),
         meta: { title: '账户管理' }
+    },
+    {// 轮播管理
+        path: '/banner',
+        component: resolve => require(['./Banner.vue'], resolve),
+        meta: { title: '轮播管理' }
     }
 ]

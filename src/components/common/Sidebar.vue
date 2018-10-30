@@ -40,6 +40,12 @@
                     },
                     {
                         icon: 'el-icon-menu',
+                        index: 'banner',
+                        title: '轮播管理',
+                        power: 'view'
+                    },
+                    {
+                        icon: 'el-icon-menu',
                         index: 'case',
                         title: '案例管理',
                         power: 'view'
