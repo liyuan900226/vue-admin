@@ -38,6 +38,28 @@
                         title: '产品管理',
                         power: 'view'
                     },
+                    {
+                        icon: 'el-icon-menu',
+                        index: 'case',
+                        title: '案例管理',
+                        power: 'view'
+                    },
+                    {
+                        icon: 'el-icon-menu',
+                        index: 'new',
+                        title: '新闻管理',
+                        power: 'view'
+                    },
+                    {
+                        icon: 'el-icon-menu',
+                        index: 'account',
+                        title: '账户管理',
+                        power: 'view'
+                    },
+
+
+
+
 
                     {
                         icon: 'el-icon-share',
