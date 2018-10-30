@@ -18,4 +18,3 @@ settings_dawang.py
 #apidoc/
 *.djcache
 __pycache__/
-env.js
