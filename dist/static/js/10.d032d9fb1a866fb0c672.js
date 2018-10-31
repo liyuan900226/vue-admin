@@ -1,0 +1,1 @@
+webpackJsonp([10],{"2DHy":function(e,t){},IJIs:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement;return(this._self._c||e)("div")},staticRenderFns:[]};var s=n("VU/8")({name:"News"},r,!1,function(e){n("2DHy")},"data-v-26f875e4",null);t.default=s.exports}});
