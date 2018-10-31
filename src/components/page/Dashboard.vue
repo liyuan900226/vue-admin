@@ -1,6 +1,9 @@
 <template>
     <div>
-        <!---->
+        <div>
+            <el-button @click="Add" type="primary">添加</el-button>
+        </div>
+        <!--表格-->
         <el-table
                 :data="tableData"
                 stripe
@@ -31,14 +34,31 @@
                 </template>
             </el-table-column>
         </el-table>
+        <!--添加对话框-->
+        <div>
+            <el-dialog
+                    title="提示"
+                    :visible.sync="dialogVisibleAdd"
+                    width="70%"
+                    :before-close="handleClose">
+                <productDetail></productDetail>
+                <span slot="footer" class="dialog-footer">
+                    <el-button @click="dialogVisibleAdd = false">取 消</el-button>
+                    <el-button type="primary" @click="dialogVisibleAdd = false">确 定</el-button>
+                </span>
+            </el-dialog>
+        </div>
     </div>
 </template>
 
 <script>
+    import productDetail from '../base/productDetail'
     export default {
         name: 'dashboard',
+        components:{productDetail},
         data() {
             return{
+                dialogVisibleAdd:false,
                 tableData: [{
                     date: '2016-05-02',
                     name: '王小虎',
@@ -59,11 +79,27 @@
             }
         },
         methods:{
+            Add(){
+                this.dialogVisibleAdd=true
+            },
             handleEdit(index, row) {
                 console.log(index, row);
             },
             handleDelete(index, row) {
                 console.log(index, row);
+                this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    //console.log(row);
+
+                }).catch(() => {
+                    this.$message({
+                        type: 'info',
+                        message: '已取消删除'
+                    });
+                });
             }
         },
         computed: {
