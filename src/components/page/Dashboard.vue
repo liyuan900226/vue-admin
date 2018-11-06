@@ -59,6 +59,9 @@
         data() {
             return{
                 dialogVisibleAdd:false,
+                formData:{
+
+                },
                 tableData: [{
                     date: '2016-05-02',
                     name: '王小虎',
@@ -84,6 +87,7 @@
             },
             handleEdit(index, row) {
                 console.log(index, row);
+                this.dialogVisibleAdd=true
             },
             handleDelete(index, row) {
                 console.log(index, row);
@@ -100,6 +104,23 @@
                         message: '已取消删除'
                     });
                 });
+            },
+            handleClose(done) {
+                this.$confirm('确认关闭？')
+                    .then(_ => {
+                        done();
+                    })
+                    .catch(_ => {});
+            },
+        },
+        watch: {
+            dialogVisibleAdd: function (val, oldVal) {
+                //this.formData.content = val
+                if(val==false){//关闭时清空
+                    this.formData={
+
+                    }
+                }
             }
         },
         computed: {

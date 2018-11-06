@@ -17,7 +17,7 @@
                             size="mini"
                             type="danger"
                             @click="handleDelete(scope.$index, scope.row)">删除</el-button>
-                </template>http://www.sycrack.com/images/logo.jpg
+                </template>
             </el-table-column>
         </el-table>
     </div>
